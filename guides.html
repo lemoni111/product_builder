@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>영상 작업 가이드 - ToolNest</title>
+    <meta name="description" content="ToolNest 영상 작업 가이드입니다. 영상 클립 저장, 비트레이트와 용량 계산, SRT 자막 싱크 조정 방법을 초보자도 이해하기 쉽게 정리했습니다.">
+    <meta name="robots" content="index, follow">
+    <meta name="google-adsense-account" content="ca-pub-8649619832836598">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="ToolNest">
+    <meta property="og:title" content="영상 작업 가이드 - ToolNest">
+    <meta property="og:description" content="짧은 클립 저장, 영상 용량 계산, 자막 싱크 조정에 필요한 실전 기준을 정리했습니다.">
+    <meta property="og:url" content="https://toolnest.pages.dev/guides.html">
+    <meta property="og:image" content="https://toolnest.pages.dev/assets/img/toolnest-og.svg">
+    <meta property="og:locale" content="ko_KR">
+    <link rel="canonical" href="https://toolnest.pages.dev/guides.html">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
+    <script src="assets/js/theme-init.js?v=2"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8649619832836598" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/styles.css?v=2">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "영상 작업 가이드",
+        "url": "https://toolnest.pages.dev/guides.html",
+        "inLanguage": "ko-KR",
+        "description": "영상 클립 저장, 비트레이트 계산, SRT 자막 싱크 조정 방법을 정리한 ToolNest 가이드입니다.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ToolNest"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="brand" href="index.html" aria-label="ToolNest 홈">
+          <span class="brand-mark" aria-hidden="true">TN</span>
+          <span>
+            <strong>ToolNest</strong>
+            <small>무료 영상 웹 도구</small>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html#tools">도구</a>
+          <a href="index.html#features">기능 소개</a>
+          <a href="index.html#guide">사용 방법</a>
+          <a href="guides.html" aria-current="page">영상 가이드</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="about.html">사이트 소개</a>
+          <a href="privacy.html">개인정보처리방침</a>
+          <a href="contact.html">문의</a>
+        </div>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="다크 모드로 전환" aria-pressed="false">
+          <span data-theme-label>화이트 모드</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="guides-title">
+        <p class="eyebrow">영상 가이드</p>
+        <h1 id="guides-title">작은 영상 작업을 더 정확하게 끝내는 방법</h1>
+        <p>
+          ToolNest의 도구는 계산과 편집을 빠르게 처리하는 데 초점을 맞춥니다.
+          아래 가이드는 어떤 값을 확인해야 하는지, 결과를 어떻게 해석해야 하는지, 작업 전에 무엇을 점검하면 좋은지 설명합니다.
+        </p>
+      </section>
+
+      <section class="section content-page article-list" aria-label="영상 작업 가이드 목록">
+        <article class="guide-article">
+          <h2>영상 클립을 저장하기 전에 확인할 것</h2>
+          <p>
+            짧은 클립을 만들 때 가장 중요한 것은 시작점과 끝점을 너무 빡빡하게 잡지 않는 것입니다.
+            말소리, 박자, 장면 전환이 있는 영상은 눈으로 보이는 변화보다 소리가 조금 먼저 또는 늦게 느껴질 수 있습니다.
+            먼저 미리보기로 구간을 반복 재생한 뒤, 필요한 경우 0.1초 단위로 조금씩 조정하는 편이 안전합니다.
+          </p>
+          <h3>추천 작업 순서</h3>
+          <ul>
+            <li>원본 영상을 선택하고 전체 길이를 확인합니다.</li>
+            <li>대략적인 시작과 끝 시간을 먼저 입력합니다.</li>
+            <li>미리보기와 반복 재생으로 말소리나 장면이 잘리지 않는지 확인합니다.</li>
+            <li>필요하면 시작점은 조금 앞쪽으로, 끝점은 조금 뒤쪽으로 여유를 둡니다.</li>
+            <li>짧은 구간으로 먼저 저장해 결과 파일이 원하는 느낌인지 확인합니다.</li>
+          </ul>
+          <p>
+            큰 영상 파일은 브라우저에서 처리 시간이 길어질 수 있습니다.
+            처음부터 긴 구간을 저장하기보다 10초에서 30초 정도의 짧은 구간으로 테스트하면 실패 가능성을 줄이고 결과를 빠르게 확인할 수 있습니다.
+          </p>
+        </article>
+
+        <article class="guide-article">
+          <h2>비트레이트와 예상 용량을 이해하는 법</h2>
+          <p>
+            비트레이트는 영상이 1초 동안 사용하는 데이터의 양을 뜻합니다.
+            같은 길이의 영상이라면 비트레이트가 높을수록 파일 용량이 커지고, 낮을수록 용량은 줄어듭니다.
+            다만 실제 화질은 해상도, 움직임의 양, 코덱, 원본 품질에 따라 함께 달라집니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>상황</th>
+                <th>확인할 값</th>
+                <th>활용 방법</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>업로드 제한 용량이 있을 때</td>
+                <td>영상 길이와 목표 용량</td>
+                <td>계산된 평균 비트레이트를 기준으로 인코딩 값을 정합니다.</td>
+              </tr>
+              <tr>
+                <td>짧은 홍보 클립을 만들 때</td>
+                <td>예상 파일 크기</td>
+                <td>공유하기 편한 용량인지 미리 확인합니다.</td>
+              </tr>
+              <tr>
+                <td>화질이 중요한 영상일 때</td>
+                <td>비디오 비트레이트</td>
+                <td>계산값보다 약간 높게 테스트해 압축 흔적이 적은지 확인합니다.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            계산 결과는 정확한 약속값이 아니라 기준값입니다.
+            편집 프로그램이나 업로드 플랫폼이 다시 압축을 적용하면 최종 용량과 화질은 달라질 수 있습니다.
+          </p>
+        </article>
+
+        <article class="guide-article">
+          <h2>SRT 자막 싱크를 맞추는 기본 방법</h2>
+          <p>
+            자막이 전체적으로 늦거나 빠르다면 모든 줄을 하나씩 고칠 필요가 없습니다.
+            먼저 전체 자막을 같은 시간만큼 앞이나 뒤로 이동한 뒤, 특정 구간만 어긋나는지 확인하는 것이 빠릅니다.
+          </p>
+          <h3>늦는 자막과 빠른 자막 구분하기</h3>
+          <ul>
+            <li>대사가 나온 뒤 자막이 늦게 보이면 자막 시간을 앞으로 당깁니다.</li>
+            <li>자막이 먼저 나오고 대사가 뒤따라오면 자막 시간을 뒤로 밉니다.</li>
+            <li>처음에는 0.5초 또는 1초 단위로 맞춘 뒤, 마지막에 0.1초 단위로 다듬습니다.</li>
+          </ul>
+          <p>
+            영상 중간부터 점점 어긋나는 경우에는 원본 자막의 프레임레이트나 영상 길이가 달라졌을 가능성이 있습니다.
+            이때는 전체 이동만으로 완전히 맞지 않을 수 있으므로, 앞부분과 뒷부분을 나누어 확인하는 것이 좋습니다.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <aside class="floating-links" aria-label="사이트 안내 바로가기">
+      <a href="about.html">사이트 소개</a>
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="contact.html">문의</a>
+    </aside>
+
+    <footer class="site-footer">
+      <div>
+        <strong>ToolNest</strong>
+        <p>브라우저에서 바로 쓰는 무료 영상 웹 도구</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">홈</a>
+        <a href="index.html#tools">도구</a>
+        <a href="about.html">사이트 소개</a>
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="contact.html">문의</a>
+        <a href="sitemap.xml">사이트맵</a>
+      </div>
+    </footer>
+    <script src="assets/js/app.js?v=2"></script>
+  </body>
+</html>

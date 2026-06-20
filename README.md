@@ -11,7 +11,7 @@ ToolNest는 Cloudflare Pages에 그대로 배포할 수 있는 정적 웹 도구
 - `assets/js/tools/`: 개별 도구 스크립트
 - `assets/js/data/content.js`: 기능 소개, FAQ 콘텐츠
 - `assets/vendor/ffmpeg/`: MP4 저장을 위한 ffmpeg.wasm 브라우저 래퍼 파일
-- `about.html`, `privacy.html`, `contact.html`: 사이트 소개, 개인정보처리방침, 문의 안내 페이지
+- `about.html`, `guides.html`, `privacy.html`, `contact.html`: 사이트 소개, 영상 작업 가이드, 개인정보처리방침, 문의 안내 페이지
 - `robots.txt`, `sitemap.xml`: 검색엔진 색인 보조 파일
 
 ## 현재 도구
