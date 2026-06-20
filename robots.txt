@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/img/
+
+Sitemap: https://toolnest.pages.dev/sitemap.xml

@@ -1,0 +1,17 @@
+{
+  "name": "ToolNest",
+  "short_name": "ToolNest",
+  "description": "브라우저에서 바로 쓰는 무료 영상 웹 도구 모음",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7fbf8",
+  "theme_color": "#196b69",
+  "lang": "ko-KR",
+  "icons": [
+    {
+      "src": "/assets/img/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ]
+}
