@@ -57,9 +57,47 @@
     });
   }
 
+  function initThemeToggle() {
+    var toggles = Array.prototype.slice.call(document.querySelectorAll("[data-theme-toggle]"));
+    if (!toggles.length) {
+      return;
+    }
+
+    function getTheme() {
+      return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    }
+
+    function applyTheme(theme) {
+      var isDark = theme === "dark";
+      document.documentElement.setAttribute("data-theme", theme);
+      try {
+        localStorage.setItem("toolnest-theme", theme);
+      } catch (error) {
+        // Ignore storage errors and keep the current page theme.
+      }
+      toggles.forEach(function (toggle) {
+        var label = toggle.querySelector("[data-theme-label]");
+        toggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+        toggle.setAttribute("aria-label", isDark ? "화이트 모드로 전환" : "다크 모드로 전환");
+        if (label) {
+          label.textContent = isDark ? "다크 모드" : "화이트 모드";
+        }
+      });
+    }
+
+    toggles.forEach(function (toggle) {
+      toggle.addEventListener("click", function () {
+        applyTheme(getTheme() === "dark" ? "light" : "dark");
+      });
+    });
+
+    applyTheme(getTheme());
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     renderContent();
     initTabs();
     initTools();
+    initThemeToggle();
   });
 })();
