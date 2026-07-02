@@ -4,4 +4,4 @@ Allow: /assets/css/
 Allow: /assets/js/
 Allow: /assets/img/
 
-Sitemap: https://toolnest.pages.dev/sitemap.xml
+Sitemap: https://product-builder-ify.pages.dev/sitemap.xml

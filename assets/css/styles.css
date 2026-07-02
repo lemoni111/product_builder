@@ -737,6 +737,23 @@ input[type="range"] {
   border-bottom: 0;
 }
 
+.guide-article pre {
+  overflow-x: auto;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.info-card a,
+.guide-article h3 a {
+  color: inherit;
+  text-decoration-color: var(--primary);
+  text-underline-offset: 4px;
+}
+
 .split-section {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);

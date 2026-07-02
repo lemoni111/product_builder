@@ -2,35 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://toolnest.pages.dev/</loc>
+    <loc>https://product-builder-ify.pages.dev/</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://toolnest.pages.dev/assets/img/toolnest-og.svg</image:loc>
+      <image:loc>https://product-builder-ify.pages.dev/assets/img/toolnest-og.svg</image:loc>
       <image:title>ToolNest 무료 영상 웹 도구</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://toolnest.pages.dev/about.html</loc>
+    <loc>https://product-builder-ify.pages.dev/about.html</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://toolnest.pages.dev/guides.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <loc>https://product-builder-ify.pages.dev/guides.html</loc>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://toolnest.pages.dev/privacy.html</loc>
+    <loc>https://product-builder-ify.pages.dev/timecode-guide.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://product-builder-ify.pages.dev/bitrate-guide.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://product-builder-ify.pages.dev/clip-editing-guide.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://product-builder-ify.pages.dev/subtitle-sync-guide.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://product-builder-ify.pages.dev/privacy.html</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toolnest.pages.dev/contact.html</loc>
+    <loc>https://product-builder-ify.pages.dev/contact.html</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
