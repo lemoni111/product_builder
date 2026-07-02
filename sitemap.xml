@@ -48,6 +48,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://product-builder-ify.pages.dev/youtube-upload-checklist.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://product-builder-ify.pages.dev/video-compression-guide.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://product-builder-ify.pages.dev/thumbnail-guide.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://product-builder-ify.pages.dev/video-glossary.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://product-builder-ify.pages.dev/troubleshooting.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://product-builder-ify.pages.dev/privacy.html</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>

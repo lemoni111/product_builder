@@ -754,6 +754,44 @@ input[type="range"] {
   text-underline-offset: 4px;
 }
 
+.check-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 28px;
+}
+
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--primary);
+  border-radius: 3px;
+  background: var(--surface);
+}
+
+.glossary-list dl {
+  display: grid;
+  gap: 12px;
+  margin: 12px 0 0;
+}
+
+.glossary-list dt {
+  font-weight: 800;
+  color: var(--text);
+}
+
+.glossary-list dd {
+  margin: -8px 0 0;
+  color: var(--muted);
+}
+
 .split-section {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);

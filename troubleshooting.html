@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>브라우저 영상 도구 문제 해결 - ToolNest</title>
+    <meta name="description" content="브라우저에서 영상 파일이 열리지 않거나 저장이 느리거나 SRT 자막이 깨질 때 확인할 문제 해결 방법을 안내합니다.">
+    <meta name="robots" content="index, follow">
+    <meta name="google-adsense-account" content="ca-pub-8649619832836598">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="ToolNest">
+    <meta property="og:title" content="브라우저 영상 도구 문제 해결 - ToolNest">
+    <meta property="og:description" content="파일 열기, MP4 저장, WebM 저장, 자막 인코딩, 브라우저 메모리 문제를 점검하는 방법입니다.">
+    <meta property="og:url" content="https://product-builder-ify.pages.dev/troubleshooting.html">
+    <meta property="og:image" content="https://product-builder-ify.pages.dev/assets/img/toolnest-og.svg">
+    <meta property="og:locale" content="ko_KR">
+    <link rel="canonical" href="https://product-builder-ify.pages.dev/troubleshooting.html">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
+    <script src="assets/js/theme-init.js?v=2"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8649619832836598" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/styles.css?v=2">
+  </head>
+  <body>
+    <header class="site-header"><nav class="nav" aria-label="주요 메뉴"><a class="brand" href="index.html" aria-label="ToolNest 홈"><span class="brand-mark" aria-hidden="true">TN</span><span><strong>ToolNest</strong><small>무료 영상 웹 도구</small></span></a><div class="nav-links"><a href="index.html#tools">도구</a><a href="guides.html">영상 가이드</a><a href="about.html">사이트 소개</a><a href="privacy.html">개인정보처리방침</a><a href="contact.html">문의</a></div><button class="theme-toggle" type="button" data-theme-toggle aria-label="다크 모드로 전환" aria-pressed="false"><span data-theme-label>화이트 모드</span></button></nav></header>
+    <main>
+      <section class="page-hero" aria-labelledby="article-title"><p class="eyebrow">문제 해결</p><h1 id="article-title">브라우저 영상 도구 문제 해결</h1><p>ToolNest는 파일을 서버로 올리지 않고 브라우저에서 처리합니다. 이 방식은 빠르고 간단하지만, 브라우저가 지원하는 코덱과 메모리 상태에 따라 결과가 달라질 수 있습니다.</p></section>
+      <section class="section content-page prose">
+        <h2>영상 파일이 열리지 않을 때</h2>
+        <p>브라우저가 해당 영상 코덱을 재생하지 못하면 미리보기가 열리지 않을 수 있습니다. 같은 MP4라도 내부 코덱이 다를 수 있으므로 다른 플레이어에서는 열리지만 브라우저에서는 열리지 않는 경우가 있습니다.</p>
+        <ul>
+          <li>가능하면 H.264 코덱의 MP4 파일로 다시 저장해 봅니다.</li>
+          <li>파일 이름에 특수문자가 많다면 짧은 영문 이름으로 바꿔 테스트합니다.</li>
+          <li>큰 파일은 먼저 짧은 샘플로 잘라 테스트합니다.</li>
+        </ul>
+        <h2>MP4 저장이 느리거나 실패할 때</h2>
+        <p>MP4 저장은 브라우저 안에서 FFmpeg WASM을 사용하므로 영상 길이와 컴퓨터 성능에 영향을 받습니다. 긴 영상 전체를 한 번에 저장하면 메모리 제한에 걸릴 수 있습니다.</p>
+        <table>
+          <thead><tr><th>증상</th><th>가능한 원인</th><th>해결 방법</th></tr></thead>
+          <tbody>
+            <tr><td>진행이 매우 느림</td><td>파일이 크거나 구간이 김</td><td>10-30초 구간으로 먼저 테스트합니다.</td></tr>
+            <tr><td>저장 실패</td><td>브라우저 메모리 부족</td><td>다른 탭을 닫고 짧은 구간으로 저장합니다.</td></tr>
+            <tr><td>재생은 되지만 저장이 안 됨</td><td>원본 코덱 호환 문제</td><td>WebM 대체 저장을 시도합니다.</td></tr>
+          </tbody>
+        </table>
+        <h2>SRT 자막이 깨질 때</h2>
+        <p>자막 글자가 깨져 보이면 파일 인코딩이 UTF-8이 아닐 가능성이 있습니다. 텍스트 편집기에서 UTF-8로 다시 저장한 뒤 불러오면 해결되는 경우가 많습니다.</p>
+        <h2>계산 결과가 예상과 다를 때</h2>
+        <p>비트레이트 계산기는 평균값을 기준으로 합니다. 실제 인코딩 프로그램이 가변 비트레이트를 쓰거나 오디오 트랙을 여러 개 포함하면 최종 용량은 달라질 수 있습니다. 계산값은 출발점으로 보고, 짧은 샘플을 만들어 조정하는 과정이 필요합니다.</p>
+        <h2>계속 문제가 생길 때 확인할 것</h2>
+        <ol>
+          <li>브라우저를 최신 버전으로 업데이트합니다.</li>
+          <li>시크릿 창이나 다른 브라우저에서 같은 파일을 테스트합니다.</li>
+          <li>파일 크기를 줄이거나 짧은 구간으로 나누어 처리합니다.</li>
+          <li>문제 상황과 브라우저 이름을 적어 문의 페이지로 알려 주세요.</li>
+        </ol>
+      </section>
+    </main>
+    <footer class="site-footer"><div><strong>ToolNest</strong><p>브라우저에서 바로 쓰는 무료 영상 웹 도구</p></div><div class="footer-links"><a href="index.html">홈</a><a href="guides.html">영상 가이드</a><a href="privacy.html">개인정보처리방침</a><a href="contact.html">문의</a></div></footer>
+    <script src="assets/js/app.js?v=2"></script>
+  </body>
+</html>
